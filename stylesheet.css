@@ -1,0 +1,196 @@
+*{
+    font-family: ubuntu mono;
+    transition: background-color 0.6s ease, color 1s ease;
+}
+
+.light {
+    --bg: #f2fcff;
+    --navbar-bg: rgba(210, 220, 223, 0.4);
+    --navbar-btn-bg: #c7dbe0;
+    --navbar-btn-border: #a6d9e6;
+    --navbar-btn-bg-hover: whitesmoke;
+}
+
+.dark {
+    color: white;
+    --bg: #23272f/* #000033 *//* #041C32 *//* #06283D *//* #1B2430 *//* #151515 */;
+    --navbar-bg: rgba(30, 30, 30, 0.6);
+    --navbar-btn-bg: #103060/* #1363DF *//* #51557E *//* #202040 */;
+    --navbar-btn-bg-hover: #1868e4;
+    --navbar-btn-border: #0858da/* #893825 */;
+}
+.dark .navbar-btn{
+    color: white;
+}
+
+.dark .project-card{
+    background-color: #28323e/* #093164 */;
+    /* box-shadow:0 4px 8px 0 rgba(200,200,200,0.2),0 4px 20px 0 rgba(200,20,200,0.19) */
+    box-shadow: none;
+}
+
+#content{
+    background-color: var(--bg);
+}
+
+.navbar {
+    height: auto;
+    width: 100%;
+    background-color: var(--navbar-bg);
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0px;
+    background: var(--navbar-bg);
+}
+
+.navbar-btn {
+    outline: none;
+    font-family: 'ubuntu mono';
+    font-size: 15px;
+    border: 1px solid var(--navbar-btn-border);
+    background-color: var(--navbar-btn-bg);
+    padding: 10px;
+    border-radius: 5%;
+    margin-top: 0 auto;
+    margin-left: 2%;
+    transition: transform 500ms, background-color 500ms;
+    opacity: 100%;
+}
+
+.navbar-btn:hover {
+    background-color: var(--navbar-btn-bg-hover);
+    transform: scale(1.25, 1.25);
+}
+
+.projects-card {
+    width: 75%;
+    border-radius: 10px;
+    margin: 0 auto;
+    
+}
+
+.accordion {
+    border-radius: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion-btn {
+    font-size: 25px;
+    font-family: ubuntu mono;
+    border-radius: 10px;
+    background-color: var(--bg);
+    width: 100%;
+    border: none;
+}
+
+.project-card {
+    background-color: var(--bg);
+    cursor: pointer;
+    transition: transform 150ms;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.project-card h4{
+    font-family: ubuntu mono;
+}
+
+.project-card:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.responsive-image {
+    max-width: 95%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* .navbar {
+    height: 10%;
+    width: 100%;
+    background-color: #d2dcdf;
+    overflow: hidden;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0px;
+    background: rgba(210, 220, 223, 0.6);
+}
+
+.navbar-btn {
+    outline: none;
+    font-family: 'ubuntu mono';
+    font-size: 15px;
+    border: 1px solid #a6d9e6;
+    background-color: #c7dbe0;
+    padding: 10px;
+    border-radius: 5%;
+    margin-top: 0 auto;
+    margin-left: 2%;
+    transition: transform 500ms, background-color 500ms;
+    opacity: 100%;
+}
+
+.navbar-btn:hover {
+    background-color: whitesmoke;
+    transform: scale(1.25, 1.25);
+}
+
+.projects-card {
+    width: 75%;
+    border-radius: 10px;
+    margin: 0 auto;
+
+}
+
+.accordion {
+    border-radius: 10px;
+    width: 100%;
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.accordion-btn {
+    font-size: 25px;
+    font-family: ubuntu mono;
+    border-radius: 10px;
+    background-color: #f2fcff;
+    width: 100%;
+    border: none;
+}
+
+.project-card {
+    background-color: #f2fcff;
+    cursor: pointer;
+    transition: transform 150ms;
+    border-radius: 10px;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.project-card h4{
+    font-family: ubuntu mono;
+}
+
+.project-card:hover {
+    transform: scale(1.05, 1.05);
+}
+
+.responsive-image {
+    max-width: 95%;
+    height: auto;
+    border-radius: 10px;
+} */

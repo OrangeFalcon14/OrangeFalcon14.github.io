@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css"/>
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="index.js"></script>
+    <title>Vishnu - About Me</title>
+</head>
+
+
+<body style="padding:none; margin: 0px;" class="light">
+    <nav class="navbar">
+        <button class="navbar-btn" onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth', block:'center'})">About Me</button>
+        <button class="navbar-btn" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth', block:'start'});">Projects</button>
+        <button class="navbar-btn" onclick="toggle_theme()" id="theme_toggle_btn"><i class="bi bi-brightness-high-fill"></i></button>
+        <button class="navbar-btn" onclick="window.open('https://github.com/OrangeFalcon14')" id="github_account_btn" style="float:right; margin-right: 2%;"><i class="bi bi-github"></i></button>
+        <p style="float:right; margin-top: 10px;">Links: </p>
+    </nav>
+    <div id="content"><!--style="background-color:#f2fcff;"-->
+        <div id="hero" style="text-align: center; padding-bottom: 0px;">
+            <br><br><br>
+            <h1 style="font-weight: bold; font-family: ubuntu mono;"><!-- The name's Vishnu. Vishnu R Shastry. -->I'm Vishnu. <br> Aka OrangeFalcon14, Dortmund Fan, etc.</h1>
+            <p style="font-family: 'ubuntu mono'; font-size: 20px;">I know - <!-- it's old school -->the intro's boring, but its the only thing I could think of.<br> After all, I'm into programming<!-- , not journalism -->. <br>I'm familiar with Python(my favourite), Javascript, HTML, CSS, Java ... and that's about it.😅</p>
+            <br>
+        </div>
+        <div id="projects" style="padding-top: 0px;text-align: center;">
+            <h2 style="font-family: Ubuntu Mono; font-weight: bold;">My Projects</h2>
+            <div class="projects-card ">
+                <div id="html_accordion">
+                    <h3 class="accordion-btn" style="text-align: center;">HTML</h3>
+                    <br>
+                    <div class="w3-row" style="text-align: left; padding: 10px;">
+                        <div class="w3-card project-card w3-third" onclick="window.open('pages/Code_Editor.html')" title="Click to view project">
+                            <h4>Code Editor</h4>
+                            <img src="images/Code_Editor.png" alt="Code Editor" class="responsive-image"><br><br>A simple HTML and Python editor made with HTML, W3.CSS and JS
+                        </div>
+                        <div class="w3-card project-card w3-third" onclick="window.open('pages/Clock.html')" title="Click to view project">
+                            <h4>Clock</h4>
+                            <img src="images/Clock.png" alt="Clock" class="responsive-image"><br><br>A simple Clock app with Timer and Stopwatch made with HTML, W3.CSS and JS
+                        </div>
+                        <div class="w3-card project-card w3-rest" style="margin-right: 0px;" title="Click to view project">
+                            <h4>Pong Single & Pong Multiplayer</h4>
+                            <img src="images/Pong.png" alt="Pong" class="responsive-image"><br><br>A simple Ping-Pong game available in both single- and multiplayer versions made with HTML, CSS and JS
+                        </div>
+                    </div>
+                </div>
+                <div id="python_accordion" class="accordion">
+                    <h4 class="accordion-btn" style="text-align: center;">Python</h4>
+                    <div class="w3-row" style="text-align: left; padding: 10px;" title="Click to view project">
+                        <div class="w3-card project-card w3-third">
+                            <h4>Tabs</h4>
+                            <img src="images/Tabs.png" alt="Tabs" class="responsive-image"><br><br>A multi-tabbed text editor made with Python and GTK
+                        </div>
+                        <div class="w3-card project-card w3-third" title="Click to view project">
+                            <h4>QuickNotes</h4>
+                            <img src="images/QuickNotes.png" alt="QuickNotes" class="responsive-image"><br><br>A simple Sticky Notes substitute for Linux made with Python and GTK
+                        </div>
+                        <!-- <div class="w3-card project-card w3-rest" style="margin-right: 0px;" title="Click to view project">
+                            <h4>Pong Single & Pong Multiplayer</h4>
+                            <img src="images/Pong.png" alt="Pong" class="responsive-image"><br><br>A simple Ping-Pong game available in both single- and multiplayer versions made with HTML, CSS and JS
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
