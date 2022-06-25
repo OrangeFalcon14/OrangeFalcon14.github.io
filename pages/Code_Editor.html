@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.4/brython.min.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.10.4/brython_stdlib.js"></script>
-  <link rel="icon" href="" type="image/png" id="icon_link">
+  <link rel="icon" href="assets/images/quickpad.png" type="image/png" id="icon_link">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     * {
@@ -295,9 +295,6 @@ except Exception as e:
       disp.innerHTML = content;
 
       document.getElementById("stats").innerHTML = "<span style='font-size:15px'><b>Stats: </b></span>" + "Characters: " + content.length + ", Lines: " + content.split("\n").length;
-
-      var loc_to_icon = ((window.location.href).slice(0, -16)) + "quickpad.png";
-      document.getElementById("icon_link").href = loc_to_icon;
 
       document.getElementById("textArea").spellcheck = false;
 

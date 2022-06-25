@@ -10,7 +10,7 @@ P.S. Try to comment out only the <html> tag. everything still works without it!
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="" type="image/png" id="icon_link">
+    <link rel="icon" href="assets/images/clock_icon.png" type="image/png" id="icon_link">
     <title>Clock</title>
     <style>
 * {
@@ -121,11 +121,6 @@ P.S. Try to comment out only the <html> tag. everything still works without it!
       </div>
       <!-- Code -->
       <script>
-function on_load() {
-  var loc_to_icon = ((window.location.href).slice(0, -10)) + "clock_icon.png";
-  console.log(loc_to_icon);
-  document.getElementById("icon_link").href = loc_to_icon;
-}
       </script>
       <script>
 function setCookie(cname,cvalue,exdays) {
