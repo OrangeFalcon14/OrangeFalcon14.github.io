@@ -1,5 +1,5 @@
 *{
-    font-family: ubuntu mono;
+    font-family: ubuntu;
     transition: background-color 0.6s ease, color 1s ease;
     -webkit-transition: background-color 0.6s ease, color 1s ease;
     -o-transition: background-color 0.6s ease, color 1s ease;
@@ -50,7 +50,7 @@
 
 .navbar-btn {
     outline: none;
-    font-family: 'ubuntu mono';
+    font-family: 'ubuntu';
     font-size: 15px;
     border: 1px solid var(--navbar-btn-border);
     background-color: var(--navbar-btn-bg);
@@ -85,7 +85,7 @@
 
 .accordion-btn {
     font-size: 25px;
-    font-family: ubuntu mono;
+    font-family: ubuntu;
     border-radius: 10px;
     background-color: var(--bg);
     width: 100%;
@@ -105,7 +105,7 @@
 }
 
 .project-card h4{
-    font-family: ubuntu mono;
+    font-family: ubuntu;
 }
 
 .project-card:hover {
