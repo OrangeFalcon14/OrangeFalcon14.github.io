@@ -6,6 +6,11 @@
     -moz-transition: background-color 0.6s ease, color 1s ease;
 }
 
+*::selection{
+    background-color: #608CA0;
+    color:white;
+}
+
 .light {
     --bg: #f2fcff;
     --navbar-bg: rgba(210, 220, 223, 0.4);
