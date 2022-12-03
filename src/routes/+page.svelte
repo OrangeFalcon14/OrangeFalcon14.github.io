@@ -11,6 +11,7 @@ import Projects from "./projects/projects.svelte";
     <HeroText />
     <DownChevrons />
 </div>
+<img src="/wave.svg" alt="wave" class="wave"/>
 <Projects />
 
 <style>
@@ -30,5 +31,10 @@ import Projects from "./projects/projects.svelte";
     left: 0;
     backdrop-filter: blur(1rem);
     z-index: 0;
+}
+.wave{
+    position: absolute;
+    top: 100vh;
+    width: 100%;
 }
 </style>

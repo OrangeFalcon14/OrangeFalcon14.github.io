@@ -21,7 +21,7 @@ const handleClick = (event) => {
 
 <div class="title-container">
     <h1>OrangeFalcon14</h1>
-    <img src="https://github.com/OrangeFalcon14/OrangeFalcon14/raw/main/GitHub%20Avatar.png" on:contextmenu={(event) => {event.preventDefault()}} class:shrink={shrink} class:jump-up={jump} class="github-avatar" alt="" on:dblclick={showAnimation} on:mousedown={handleClick} on:mouseup={() => {jump = false; shrink = false}}/>
+    <img src="https://avatars.githubusercontent.com/u/108143702" on:contextmenu={(event) => {event.preventDefault()}} class:shrink={shrink} class:jump-up={jump} class="github-avatar" alt="" on:dblclick={showAnimation} on:mousedown={handleClick} on:mouseup={() => {jump = false; shrink = false}}/>
     {#if showAnimationFlag}
         <Sprite />
     {/if}
@@ -40,6 +40,7 @@ const handleClick = (event) => {
 }
 .title-container h1{
     margin-bottom: 10px;
+    font-family: Play;
 }
 
 @media (max-width: 500px) {
