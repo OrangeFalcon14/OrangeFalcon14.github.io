@@ -1,5 +1,6 @@
 <script>
 import { onMount } from "svelte";
+import Sidebar from "./Sidebar.svelte";
 
 let SHOOT_LASERS = false;
 
@@ -171,6 +172,7 @@ function angleToPoint(cx, cy, ex, ey) {
 
 <canvas id="bg"></canvas>
 <div id="home" on:dblclick={() => SHOOT_LASERS = !SHOOT_LASERS}>
+    <Sidebar />
     <div id="three-js">
 
     </div>
