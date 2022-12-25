@@ -108,14 +108,14 @@ onMount(() => {
         {
             id: 1,
             x: 1400,
-            y: 100,
+            y: 350,
             angle: 50 / 180 * Math.PI,
             lasers: []
         },
         {
             id: 2,
-            x: 1700,
-            y: 700,
+            x: 1300,
+            y: 750,
             angle: 50 / 180 * Math.PI,
             lasers: []
         },
@@ -147,10 +147,15 @@ onMount(() => {
         
     }, 30);
     
-    canvas.addEventListener("mousemove", (event) => {
+    document.querySelector("#home").addEventListener("mousemove", (event) => {
         ships.forEach(ship => {
             ship.angle = -angleToPoint(event.pageX, event.pageY, ship.x, ship.y) - Math.PI;
         })
+    })
+
+    document.addEventListener("resize", () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     })
 
 })
@@ -164,4 +169,66 @@ function angleToPoint(cx, cy, ex, ey) {
 
 </script>
 
-<canvas id="bg" on:dblclick={() => SHOOT_LASERS = !SHOOT_LASERS}></canvas>
+<canvas id="bg"></canvas>
+<div id="home" on:dblclick={() => SHOOT_LASERS = !SHOOT_LASERS}>
+    <div id="three-js">
+
+    </div>
+    <div id="abt-me">
+        <h1>Hi! I am Vishnu</h1>
+        <p>A web developer who also knows Python</p>
+    </div>
+</div>
+
+<style>
+#bg{
+    animation: bg 5s infinite;
+}
+
+@keyframes bg{
+    0%{
+        background: #00080f;
+        /* background: linear-gradient(#00080f, #004177); */
+    }
+    50%{
+        background: #000a12;
+    }
+    100%{
+        background: #00080f;
+    }
+}
+
+#home{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    color: #ddd;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    padding: 3rem;
+}
+#abt-me{
+    display: flex;
+    align-items: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    /* flex-direction: column; */
+}
+h1{
+    font-size: 7rem;
+    font-family: Raleway;
+    font-weight: 100;
+    margin: 1rem;
+}
+p{
+    font-size: 1.5rem;
+    font-family: Quicksand;
+    font-weight: 600;
+}
+</style>

@@ -16,3 +16,16 @@ html, body{
 body{
     background: var(--bg);
 }
+
+@font-face {
+    font-family: SpaceMono;
+    src: url("/fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+@font-face {
+    font-family: Raleway;
+    src: url("/fonts/Raleway/Raleway-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: Quicksand;
+    src: url("/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
