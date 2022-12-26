@@ -16,6 +16,7 @@ html, body{
 
 body{
   background: var(--bg);
+  overflow-x: hidden;
 }
 
 @font-face {
