@@ -1,12 +1,14 @@
 <script>
 export let icon = "";
 export let image = "";
+export let style = "";
+export let title = "";
 </script>
 
-<button on:click>
+<button on:click {style} {title}>
     {#if icon !== ""}
         <i class={icon}></i>
-    {:else if image !== ""}    
+    {:else if image !== ""}
         <img src={image} alt="Github Avatar" />
     {/if}
 </button>
@@ -19,6 +21,7 @@ button{
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
     display: block;
+    width: 100%;
 }
 button:first-of-type{
     padding: 1rem 1.2rem
