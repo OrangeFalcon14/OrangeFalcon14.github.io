@@ -1,6 +1,6 @@
 <script>
 import { onMount } from "svelte";
-import * as THREE from "three";
+import { AmbientLight, PerspectiveCamera, PointLight, Scene, WebGLRenderer } from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
@@ -11,9 +11,9 @@ onMount(() => {
   // @ts-ignore
   canvas.style.width = "600px";
 
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha:true });
+  const renderer = new WebGLRenderer({ canvas, alpha:true });
 
-  const scene = new THREE.Scene();
+  const scene = new Scene();
 
 
   const fov = 75;
@@ -21,7 +21,7 @@ onMount(() => {
   const aspect = canvas.width / canvas.height;
   const near = 0.1;
   const far = 1000;
-  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  const camera = new PerspectiveCamera(fov, aspect, near, far);
   // @ts-ignore
   camera.position.z = 4;
 
@@ -42,15 +42,15 @@ onMount(() => {
     console.log(error);
   })
 
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+  const ambientLight = new AmbientLight(0xffffff, 1);
   scene.add(ambientLight);
 
-  const light1 = new THREE.PointLight(0xffffff, 0.7);
+  const light1 = new PointLight(0xffffff, 0.7);
   // @ts-ignore
   light1.position.set(20, 20, 22);
   scene.add(light1);
 
-  const light2= new THREE.PointLight(0xffffff, 0.7);
+  const light2= new PointLight(0xffffff, 0.7);
   // @ts-ignore
   light2.position.set(-20, 20, -22);
   scene.add(light2);
