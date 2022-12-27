@@ -20,10 +20,10 @@ onMount(() => {
   // @ts-ignore
   const aspect = canvas.width / canvas.height;
   const near = 0.1;
-  const far = 5;
+  const far = 1000;
   const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
   // @ts-ignore
-  camera.position.z = 2;
+  camera.position.z = 4;
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.minPolarAngle = controls.maxPolarAngle = Math.PI / 2;
@@ -32,24 +32,28 @@ onMount(() => {
   controls.enablePan = controls.enableZoom = false;
   controls.update();
 
-  const cube = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial({ color: 0x002547 }));
-  scene.add(cube);
+  let gem;
+  const loader = new GLTFLoader();
+  loader.load("/polygon.glb", (gltf) => {
+    gem = gltf.scene.children.find(child => child.name === "Cube");
+    gem.position.set(0,0,0)
+    scene.add(gem);
+  }, undefined, (error) => {
+    console.log(error);
+  })
 
-  // const loader = new GLTFLoader();
-  // loader.load("/polygon.glb", (gltf) => {
-  //   gltf.scene.position.set(0, 0, 0);
-  //   // scene.add(gltf.scene);
-  // }, undefined, (error) => {
-  //   console.log(error);
-  // })
-
-  const ambientLight = new THREE.AmbientLight(0xffffff, 100);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1);
   scene.add(ambientLight);
 
-  const light = new THREE.PointLight(0xffffff, 100);
+  const light1 = new THREE.PointLight(0xffffff, 0.7);
   // @ts-ignore
-  light.position.set(1, 0, 5);
-  scene.add(light);
+  light1.position.set(20, 20, 22);
+  scene.add(light1);
+
+  const light2= new THREE.PointLight(0xffffff, 0.7);
+  // @ts-ignore
+  light2.position.set(-20, 20, -22);
+  scene.add(light2);
 
   function resizeRendererToDisplaySize(renderer) {
     const canvas = renderer.domElement;
@@ -79,3 +83,9 @@ onMount(() => {
 </script>
 
 <canvas id="rotating-obj"></canvas>
+
+<style>
+canvas{
+  margin-right: 10rem;
+}
+</style>
