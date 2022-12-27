@@ -4,7 +4,7 @@
 import { onMount } from "svelte";
 
 export let SHOOT_LASERS = false;
-const SHIP_SPEED = 100;
+const SHIP_SPEED = 50;
 const LASER_SPEED = 1000;
 
 const mouseCoordinates = {
