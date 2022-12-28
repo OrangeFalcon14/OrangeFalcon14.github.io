@@ -1,17 +1,19 @@
 <script>
 export let name;
 export let description;
-export let gitHubLink;
+export let gitHubLink = "";
 export let playLink = "";
+
+const isAsteroids = name === "Asteroids";
 </script>
 
 <div class="project-card">
     <img src={`/images/${name.toLowerCase()}.png`} class:quicknotes={name === "QuickNotes"} alt={name} />
     <header>{name}</header>
     <p>{description}</p>
-    <a href={gitHubLink}><i class="fa-brands fa-github"></i> {name}</a>
+    <a href={!isAsteroids ? gitHubLink : "#"} target="_blank" rel="noreferrer" class:inactive={name === "Asteroids"}><i class="fa-brands fa-github"></i> {name}</a>
     {#if name === "Asteroids"}
-        <a href={playLink} style="margin-left: 0.75rem;"><i class="fa-solid fa-play"></i> Play</a>
+        <a href={playLink} target="_blank" rel="noreferrer" style="margin-left: 0.75rem;"><i class="fa-solid fa-play"></i> Play</a>
     {/if}
 </div>
 
@@ -48,5 +50,9 @@ export let playLink = "";
     text-decoration: none;
     font-family: Quicksand;
     color: #86a3f4;
+}
+.project-card a.inactive{
+    cursor:not-allowed;
+    color: grey;
 }
 </style>

@@ -22,10 +22,10 @@ let SHOOT_LASERS = false;
     <h2>Projects</h2>
     <div id="projects-container">
         <ProjectCard name="Nexion" description="An online desktop inspired by GNOME made with Svelte" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
-        <ProjectCard name="Code Editor" description="A HTML editor with preview made with HTML, CSS and JS" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
-        <ProjectCard name="Asteroids" description="An Atari Asteroids clone made with HTML canvas" gitHubLink="https://github.com/OrangeFalcon14/Nexion" playLink="" />
-        <ProjectCard name="Tabs" description="A multi-tabbed text editor made with GTK and Python" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
-        <ProjectCard name="QuickNotes" description="A simple Sticky Notes substitutes made with GTK and Python" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
+        <ProjectCard name="Code Editor" description="A HTML editor with preview made with HTML, CSS and JS" gitHubLink="https://github.com/OrangeFalcon14/CodeEditor" />
+        <ProjectCard name="Asteroids" description="An Atari Asteroids clone made with HTML canvas" playLink="https://orangefalcon14.github.io/IT-Fair-Project/old_projects/Asteroids.html" />
+        <ProjectCard name="Tabs" description="A multi-tabbed text editor made with GTK and Python" gitHubLink="https://github.com/OrangeFalcon14/Tabs" />
+        <ProjectCard name="QuickNotes" description="A simple Sticky Notes substitutes made with GTK and Python" gitHubLink="https://github.com/OrangeFalcon14/QuickNotes" />
         <!-- <ProjectCard name="Nexion" description="An online desktop inspired by GNOME" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
         <ProjectCard name="Nexion" description="An online desktop inspired by GNOME" gitHubLink="https://github.com/OrangeFalcon14/Nexion" /> -->
     </div>
