@@ -7,7 +7,7 @@ import SidebarButton from "./SidebarButton.svelte";
         <SidebarButton image={"https://avatars.githubusercontent.com/u/108143702?s=35&v=4"}/>
         <hr>
         <SidebarButton icon={"fa-solid fa-house"} on:click={() => document.querySelector("#home").scrollIntoView({behavior: "smooth"})}/>
-        <SidebarButton icon={"fa-solid fa-code"}/>
+        <SidebarButton icon={"fa-solid fa-code"} on:click={() => document.querySelector("#projects").scrollIntoView({behavior: "smooth"})}/>
         <hr>
         <SidebarButton icon={"fa-brands fa-github"} on:click={() => window.open("https://github.com/OrangeFalcon14/")}/>
     </div>
@@ -29,6 +29,7 @@ import SidebarButton from "./SidebarButton.svelte";
     width: fit-content;
     height: 100%;
     overflow: hidden;
+    overflow-y: scroll;
     left: 0rem;
     top: 0rem;
     background: var(--color1);

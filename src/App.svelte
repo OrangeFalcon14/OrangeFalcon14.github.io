@@ -2,6 +2,7 @@
 import Sidebar from "./lib/Sidebar.svelte";
 import ThreeJs from "./lib/ThreeJS.svelte";
 import SpaceBG from "./lib/SpaceBG.svelte";
+import ProjectCard from "./lib/ProjectCard.svelte";
 
 let SHOOT_LASERS = false;
 </script>
@@ -15,6 +16,18 @@ let SHOOT_LASERS = false;
     </div>
     <div id="three-js">
         <ThreeJs />
+    </div>
+</div>
+<div id="projects">
+    <h2>Projects</h2>
+    <div id="projects-container">
+        <ProjectCard name="Nexion" description="An online desktop inspired by GNOME made with Svelte" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
+        <ProjectCard name="Code Editor" description="A HTML editor with preview made with HTML, CSS and JS" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
+        <ProjectCard name="Asteroids" description="An Atari Asteroids clone made with HTML canvas" gitHubLink="https://github.com/OrangeFalcon14/Nexion" playLink="" />
+        <ProjectCard name="Tabs" description="A multi-tabbed text editor made with GTK and Python" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
+        <ProjectCard name="QuickNotes" description="A simple Sticky Notes substitutes made with GTK and Python" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
+        <!-- <ProjectCard name="Nexion" description="An online desktop inspired by GNOME" gitHubLink="https://github.com/OrangeFalcon14/Nexion" />
+        <ProjectCard name="Nexion" description="An online desktop inspired by GNOME" gitHubLink="https://github.com/OrangeFalcon14/Nexion" /> -->
     </div>
 </div>
 
@@ -48,6 +61,12 @@ h1{
     font-weight: 100;
     margin: 1rem;
 }
+h2{
+    font-size: 3.5rem;
+    font-family: SpaceMono;
+    font-weight: 100;
+    margin: 1rem;
+}
 p{
     font-size: 1.5rem;
     font-family: Quicksand;
@@ -58,5 +77,15 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#projects{
+    padding: 2rem 7rem;
+    height: 100vh;
+}
+#projects-container{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
 }
 </style>

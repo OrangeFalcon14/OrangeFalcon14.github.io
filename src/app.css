@@ -12,11 +12,13 @@ html, body{
 :root{
   --bg: #00080f;
   --color1: #000f1d;
+  --color2: #001222;
 }
 
 body{
   background: var(--bg);
   overflow-x: hidden;
+  color: #ddd;
 }
 
 @font-face {
@@ -30,4 +32,11 @@ body{
 @font-face {
   font-family: Quicksand;
   src: url("/fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
+.project-card:hover~.project-card{
+  transform: translateX(10rem);
+}
+.project-card:not(:first-child){
+  margin-left: -10rem;
 }
