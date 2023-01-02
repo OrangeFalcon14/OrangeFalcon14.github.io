@@ -86,6 +86,6 @@ p{
 #projects-container{
     display: flex;
     flex-direction: row;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 </style>

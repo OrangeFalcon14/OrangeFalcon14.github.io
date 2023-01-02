@@ -29,7 +29,7 @@ import SidebarButton from "./SidebarButton.svelte";
     width: fit-content;
     height: 100%;
     overflow: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
     left: 0rem;
     top: 0rem;
     background: var(--color1);
